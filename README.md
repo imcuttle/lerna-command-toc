@@ -7,7 +7,30 @@
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 
-> lerna command for generate toc of packages
+> lerna command for generate toc of packages in markdown
+
+- Input (`README.md`)
+
+```markdown
+# my-package
+
+## Packages
+
+## Other
+```
+
+- Output (After run `lerna toc`)
+
+```markdown
+# my-package
+
+## Packages
+
+- [package-a](packages/a) - a description
+- [package-b](packages/b) - b description
+
+## Other
+```
 
 ## Installation
 
@@ -35,6 +58,19 @@ yarn add lerna-command-toc lerna-cli --dev
 ```bash
 lerna toc --help
 lerna toc
+```
+
+- We recommend use `lerna-command-toc` with `pre-comment` git hook
+
+```json5
+// package.json
+{
+  husky: {
+    hooks: {
+      'pre-commit': 'npx lerna toc && git add README.md'
+    }
+  }
+}
 ```
 
 ## Contributing
