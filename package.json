@@ -1,0 +1,69 @@
+{
+  "name": "lerna-command-toc",
+  "version": "1.0.0",
+  "description": "lerna cli with custom command extensions",
+  "author": "imcuttle <imcuttle@163.com>",
+  "scripts": {
+    "test": "npx jest",
+    "preversion": "npm test",
+    "version": "npm run changelog",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "es",
+    "types",
+    "lib",
+    "src",
+    "__tests__"
+  ],
+  "keywords": [
+    "imcuttle",
+    "lerna",
+    "command",
+    "toc",
+    "lerna-command-toc"
+  ],
+  "main": "src",
+  "types": "src/index.d.ts",
+  "license": "MIT",
+  "repository": "imcuttle/lerna-command-toc",
+  "jest": {
+    "testMatch": [
+      "**/__test{s,}__/*.(spec|test).{t,j}s{x,}"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/jest": "^26.0.15",
+    "conventional-changelog-cli": "^2.1.0",
+    "husky": "^4.3.0",
+    "jest": "^26.6.0",
+    "lerna-cli": "^3.0.0",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0"
+  },
+  "dependencies": {
+    "@lerna/command": "^3.21.0",
+    "@lerna/filter-options": "^3.20.0",
+    "@lerna/validation-error": "^3.13.0",
+    "@moyuyc/visit-tree": "^3.0.0",
+    "mdast-util-to-string": "^1.1.0",
+    "remark": "^13.0.0"
+  }
+}

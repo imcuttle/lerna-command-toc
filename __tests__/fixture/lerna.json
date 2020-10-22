@@ -1,0 +1,10 @@
+{
+  "packages": ["packages/*"],
+  "extendCommands": ["../.."],
+  "command": {
+    "toc": {
+      "extra": "foo"
+    }
+  },
+  "version": "0.0.0"
+}
