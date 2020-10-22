@@ -24,7 +24,8 @@
     "types",
     "lib",
     "src",
-    "__tests__"
+    "__tests__",
+    "command"
   ],
   "keywords": [
     "imcuttle",
