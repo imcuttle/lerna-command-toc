@@ -7,20 +7,34 @@
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 
-> lerna cli with custom command extensions
+> lerna command for generate toc of packages
 
 ## Installation
 
 ```bash
-npm install lerna-command-toc
+npm install lerna-command-toc lerna-cli -D
 # or use yarn
-yarn add lerna-command-toc
+yarn add lerna-command-toc lerna-cli --dev
 ```
 
 ## Usage
 
-```javascript
-const lernaCommandToc = require('lerna-command-toc')
+- `lerna.json`
+
+```json
+{
+  "extendCommands": ["lerna-command-toc"],
+  "command": {
+    "toc": {}
+  }
+}
+```
+
+- Run command
+
+```bash
+lerna toc --help
+lerna toc
 ```
 
 ## Contributing
