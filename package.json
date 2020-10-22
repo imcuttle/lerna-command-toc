@@ -1,6 +1,6 @@
 {
   "name": "lerna-command-toc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "lerna command for generate toc of packages",
   "author": "imcuttle <imcuttle@163.com>",
   "scripts": {
