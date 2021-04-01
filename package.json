@@ -55,14 +55,14 @@
     "conventional-changelog-cli": "^2.1.0",
     "husky": "^4.3.0",
     "jest": "^26.6.0",
-    "lerna-cli": "^3.0.0",
+    "lerna-cli": "^4.0.0",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.1.0"
   },
   "dependencies": {
-    "@lerna/command": "^3.21.0",
-    "@lerna/filter-options": "^3.20.0",
-    "@lerna/validation-error": "^3.13.0",
+    "@lerna/command": "^4.0.0",
+    "@lerna/filter-options": "^4.0.0",
+    "@lerna/validation-error": "^4.0.0",
     "@moyuyc/visit-tree": "^3.0.0",
     "mdast-util-to-string": "^1.1.0",
     "remark": "^13.0.0"

@@ -30,9 +30,9 @@ const createSingleFileFs = () => {
 describe('lernaCommandToc', function () {
   it('toc --help', function () {
     const output = exec('lerna toc --help')
-    expect(output).toMatch('--heading     Markdown heading matching text  [string]')
-    expect(output).toMatch('--input, -i   Markdown input filename  [string]')
-    expect(output).toMatch('--output, -o  Markdown output filename  [string]')
+    expect(output).toMatch(/--heading\s+Markdown heading matching text\s+\[string]/)
+    expect(output).toMatch(/-i, --input\s+Markdown input filename\s+\[string]/)
+    expect(output).toMatch(/-o, --output\s+Markdown output filename\s+\[string]/)
   })
 
   describe('Readme.md', function () {

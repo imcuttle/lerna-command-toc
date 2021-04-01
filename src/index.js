@@ -6,9 +6,9 @@ const fs = require('fs')
 const nps = require('path')
 const { promisify } = require('util')
 
-const Command = require('@lerna/command')
+const { Command } = require('@lerna/command')
 const { getFilteredPackages } = require('@lerna/filter-options')
-const ValidationError = require('@lerna/validation-error')
+const { ValidationError } = require('@lerna/validation-error')
 
 const generate = require('./generate')
 

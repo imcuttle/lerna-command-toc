@@ -1,4 +1,4 @@
-const filterable = require('@lerna/filter-options')
+const { filterOptions } = require('@lerna/filter-options')
 
 exports.command = 'toc'
 
@@ -27,7 +27,7 @@ exports.builder = (yargs) => {
     }
   })
 
-  return filterable(yargs)
+  return filterOptions(yargs)
 }
 
 exports.handler = function handler(argv) {
