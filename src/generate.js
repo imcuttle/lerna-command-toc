@@ -11,8 +11,9 @@ async function generateToc(packages, root, prevContent, heading) {
   const tocMd = packages
     .map((pkg) => {
       const description = pkg.get('description')
+      const isPrivate = pkg.get('private')
       const name = pkg.name
-      return `* [${name}](${nps.relative(root, pkg.location)}) - ${description}`
+      return `* [${name}](${nps.relative(root, pkg.location)}) - ${isPrivate ? '(private) ' : ''}${description || ''}`
     })
     .join('\n')
 

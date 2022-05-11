@@ -49,8 +49,9 @@ describe('lernaCommandToc', function () {
 
         ## Packages
 
-        *   [a](packages/a) - a description
+        *   [a](packages/a) - (private) a description
         *   [b](packages/b) - b description
+        *   [c](packages/c) - (private) c description
         "
       `)
     })
@@ -63,8 +64,9 @@ describe('lernaCommandToc', function () {
 
         ## Packages
 
-        *   [a](../packages/a) - a description
+        *   [a](../packages/a) - (private) a description
         *   [b](../packages/b) - b description
+        *   [c](../packages/c) - (private) c description
 
         ## Packages
         "
@@ -79,7 +81,7 @@ describe('lernaCommandToc', function () {
 
         ## Packages
 
-        *   [a](packages/a) - a description
+        *   [a](packages/a) - (private) a description
         "
       `)
     })

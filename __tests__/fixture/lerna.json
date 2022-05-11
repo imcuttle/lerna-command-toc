@@ -3,7 +3,8 @@
   "extendCommands": ["../.."],
   "command": {
     "toc": {
-      "extra": "foo"
+      "extra": "foo",
+      "private": true
     }
   },
   "version": "0.0.0"
